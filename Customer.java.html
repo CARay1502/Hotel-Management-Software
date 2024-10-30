@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Customer.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Customer.java</font>
+</center></td></tr></table>
+<pre><span class="s0">//rewrite class to handle input and logic in class to increase modularity</span>
+<span class="s0">// customer.collectInfo() + customer.displayInfo()</span>
+<span class="s2">import </span><span class="s1">java</span><span class="s3">.</span><span class="s1">util</span><span class="s3">.*;</span>
+
+<span class="s0">//customer class to create/collect/display customer data</span>
+<span class="s2">public class </span><span class="s1">Customer </span><span class="s3">{</span>
+    <span class="s2">private </span><span class="s1">String name</span><span class="s3">; </span><span class="s0">//will only do one string for first and last name to keep data handling simpler</span>
+    <span class="s2">private </span><span class="s1">String contact</span><span class="s3">; </span><span class="s0">//String used because no mathematical logic needed for contact numbers</span>
+    <span class="s2">private int </span><span class="s1">roomNum</span><span class="s3">;</span>
+
+    <span class="s1">Scanner scanner </span><span class="s3">= </span><span class="s2">new </span><span class="s1">Scanner</span><span class="s3">(</span><span class="s1">System</span><span class="s3">.</span><span class="s1">in</span><span class="s3">); </span><span class="s0">//scanner instance for user input</span>
+    <span class="s2">public static void </span><span class="s1">customer</span><span class="s3">(){</span>
+        <span class="s2">return</span><span class="s3">;</span>
+    <span class="s3">}</span>
+    <span class="s0">//method for collecting customer name and contact</span>
+    <span class="s2">public void </span><span class="s1">collectInfo</span><span class="s3">(){</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter customer name: &quot;</span><span class="s3">);</span>
+        <span class="s2">this</span><span class="s3">.</span><span class="s1">name </span><span class="s3">= </span><span class="s1">scanner</span><span class="s3">.</span><span class="s1">nextLine</span><span class="s3">();</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter contact phone number: </span><span class="s2">\n </span><span class="s4">(Numbers only) &quot;</span><span class="s3">);</span>
+        <span class="s2">this</span><span class="s3">.</span><span class="s1">contact </span><span class="s3">= </span><span class="s1">scanner</span><span class="s3">.</span><span class="s1">nextLine</span><span class="s3">();</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Enter customer room number: &quot;</span><span class="s3">);</span>
+        <span class="s2">this</span><span class="s3">.</span><span class="s1">roomNum </span><span class="s3">= </span><span class="s1">scanner</span><span class="s3">.</span><span class="s1">nextInt</span><span class="s3">();</span>
+    <span class="s3">}</span>
+    <span class="s0">//method to display collected customer data</span>
+    <span class="s2">public void </span><span class="s1">displayInfo</span><span class="s3">(){</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;</span><span class="s2">\n</span><span class="s4">Customer Info: &quot;</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Name: &quot; </span><span class="s3">+ </span><span class="s1">name</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Contact: &quot; </span><span class="s3">+ </span><span class="s1">contact</span><span class="s3">);</span>
+        <span class="s1">System</span><span class="s3">.</span><span class="s1">out</span><span class="s3">.</span><span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Room Number: &quot; </span><span class="s3">+ </span><span class="s1">roomNum</span><span class="s3">);</span>
+    <span class="s3">}</span>
+
+    <span class="s0">//getters for returning Info -&gt; don't need setters since we have collectInfo and it's simple</span>
+    <span class="s2">public </span><span class="s1">String getContact</span><span class="s3">(){</span>
+        <span class="s2">return </span><span class="s1">contact</span><span class="s3">;</span>
+    <span class="s3">}</span>
+    <span class="s2">public </span><span class="s1">String getName</span><span class="s3">(){</span>
+        <span class="s2">return </span><span class="s1">name</span><span class="s3">;</span>
+    <span class="s3">}</span>
+    <span class="s2">public int </span><span class="s1">getRoomNum</span><span class="s3">(){</span>
+        <span class="s2">return </span><span class="s1">roomNum</span><span class="s3">;</span>
+    <span class="s3">}</span>
+
+    <span class="s0">//genRoomNum() not needed since we will assign room number</span>
+
+    <span class="s0">//function to generate room number</span>
+    <span class="s0">//will change to assign customer to desired room instead of random in future</span>
+    <span class="s0">//room number 1-400</span>
+    <span class="s0">//public void genRoomNum(){</span>
+    <span class="s0">//    roomNum = (int)(Math.random() * 400) + 1;</span>
+    <span class="s0">//}</span>
+    <span class="s0">//getters/setters for roomNum</span>
+    <span class="s0">//public int getRoomNum(){</span>
+    <span class="s0">//    return roomNum;</span>
+    <span class="s0">//}</span>
+    <span class="s0">//public void setRoomNum(int roomNum){</span>
+    <span class="s0">//    this.roomNum = roomNum;</span>
+    <span class="s0">//}</span>
+<span class="s3">}</span>
+</pre>
+</body>
+</html>
