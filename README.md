@@ -12,6 +12,10 @@ Main class that executes the program. Includes a *directory* class with *getDire
 *Customer.Java*
 
 Class that creates a customer object with important attributes: *name, contact, roomNum* for each customer that a user will input. *collectInfo()* and *displayInfo()* methods are for inputing information about the customer and displaying the information when called respectively. 
+
+Topics Covered-
+Classes and Objects, Inheritance, File Handling with Objects, ArrayList, implementing Interface, User defined exception and Exception handling.
+
 ## Acknowledgements
 Idea based on *shouryaj98's beginner Java Project with great help from W3 Schools Java documentation for programming reference.
  - [Shourya98's: Hotel Management Project Java](https://github.com/shouryaj98/Hotel-Management-Project-Java)
