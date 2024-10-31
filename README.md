@@ -2,6 +2,8 @@
 # Hotel Management Software
 
 Hotel California is in need of a way to add/view and search for guests. This software is designed to do just that! As one of my first Java projects on Github, its designed to demonstrate basic fundamentals of the Java programming language. 
+**Will be updating in the future with more features**
+
 ### Project Overview
 **File Setup:**
 
